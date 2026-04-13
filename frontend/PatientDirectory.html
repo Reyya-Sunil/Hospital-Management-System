@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Public+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e0e3e5",
+                        "on-primary-fixed": "#001b3d",
+                        "tertiary-fixed": "#ffdbcb",
+                        "background": "#f7f9fb",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#c8daff",
+                        "surface-bright": "#f7f9fb",
+                        "surface-container-low": "#f2f4f6",
+                        "surface": "#f7f9fb",
+                        "on-tertiary-fixed-variant": "#793100",
+                        "outline": "#727783",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#424752",
+                        "on-secondary-fixed": "#001d33",
+                        "primary-fixed-dim": "#a9c7ff",
+                        "secondary": "#47617b",
+                        "on-secondary-fixed-variant": "#2f4962",
+                        "on-primary-fixed-variant": "#00468c",
+                        "tertiary-fixed-dim": "#ffb691",
+                        "tertiary-container": "#9f4300",
+                        "surface-tint": "#005db6",
+                        "inverse-on-surface": "#eff1f3",
+                        "primary-fixed": "#d6e3ff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#341100",
+                        "surface-container-high": "#e6e8ea",
+                        "secondary-fixed-dim": "#aec9e7",
+                        "secondary-container": "#c4e0ff",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#793100",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#eceef0",
+                        "primary-container": "#005eb8",
+                        "inverse-surface": "#2d3133",
+                        "on-tertiary-container": "#ffcfb9",
+                        "secondary-fixed": "#cfe5ff",
+                        "surface-dim": "#d8dadc",
+                        "primary": "#00478d",
+                        "on-background": "#191c1e",
+                        "inverse-primary": "#a9c7ff",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#e0e3e5",
+                        "on-secondary-container": "#49637d",
+                        "on-surface": "#191c1e",
+                        "outline-variant": "#c2c6d4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Public Sans"],
+                        "label": ["Public Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .headline-font { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-24 md:pb-0 md:pt-16">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-3 bg-[#f2f4f6] dark:bg-slate-900 border-none shadow-[0_12px_40px_rgba(0,71,141,0.08)]">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center overflow-hidden">
+<img alt="Clinician Profile" class="w-full h-full object-cover" data-alt="professional headshot of a medical professional in a clean clinical setting with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6C7BO4ghE90FoFX9m0d-AvdEwedfBz1Llg1rIUpjGI63w36y7CAHN6W6c4n-9V0SojjI4YDsI-iu0PF7rtPk3wQ_dXNEp8AD6foF8ZHdZ94bvYek-QFJ1_tmK7Xyrb1NsUMoInVkszN4vFmkrcfl1LzDnPj7Q-Y4NprEuaD5wOqUfZHMB31u_qTCSCWzmhR3hJg5Tap6esEBJlMYXEw7IkAclSrtDvL2n9NdGTP4eei-Vdg0EqeUGI5lm7Z7WnThdOJWjJh_ZI4M"/>
+</div>
+<h1 class="text-lg font-extrabold tracking-tight text-[#00478d] dark:text-blue-300 font-['Manrope']">Clinical Precision</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-[#424752] dark:text-slate-400 font-['Manrope'] hover:bg-[#f2f4f6] dark:hover:bg-slate-800 transition-colors px-3 py-1 rounded-lg" href="/clinician">Dashboard</a>
+<a class="text-[#424752] dark:text-slate-400 font-['Manrope'] hover:bg-[#f2f4f6] dark:hover:bg-slate-800 transition-colors px-3 py-1 rounded-lg" href="/appointments">Appointments</a>
+<a class="text-[#005EB8] font-bold font-['Manrope'] px-3 py-1 rounded-lg" href="/patients">Patients</a>
+<a class="text-[#424752] dark:text-slate-400 font-['Manrope'] hover:bg-[#f2f4f6] dark:hover:bg-slate-800 transition-colors px-3 py-1 rounded-lg" href="#">Messages</a>
+</nav>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-[#f2f4f6] dark:hover:bg-slate-800 transition-colors active:opacity-80">
+<span class="material-symbols-outlined text-[#005EB8] dark:text-blue-400">notifications</span>
+</button>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+<!-- Page Header & Search -->
+<section class="mb-10">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="space-y-1">
+<h2 class="text-3xl font-extrabold headline-font tracking-tight text-on-surface">Patient Directory</h2>
+<p class="text-on-surface-variant font-medium">Manage and monitor patient records across all departments.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+<div class="relative flex-grow min-w-[300px]">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface-container-lowest rounded-xl border-none focus:ring-2 focus:ring-primary shadow-sm text-on-surface" placeholder="Search by name, ID, or condition..." type="text"/>
+</div>
+<button class="flex items-center justify-center gap-2 px-6 py-3 bg-surface-container-high text-on-surface-variant font-semibold rounded-xl hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-xl">tune</span>
+                        Filters
+                    </button>
+</div>
+</div>
+</section>
+<!-- Department Quick Switch -->
+<section class="mb-8 overflow-x-auto pb-2">
+<div class="flex items-center gap-3">
+<button class="whitespace-nowrap px-5 py-2 rounded-full bg-primary text-white font-semibold text-sm">All Departments</button>
+<button class="whitespace-nowrap px-5 py-2 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high font-semibold text-sm transition-colors">Cardiology</button>
+<button class="whitespace-nowrap px-5 py-2 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high font-semibold text-sm transition-colors">Neurology</button>
+<button class="whitespace-nowrap px-5 py-2 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high font-semibold text-sm transition-colors">Pediatrics</button>
+<button class="whitespace-nowrap px-5 py-2 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high font-semibold text-sm transition-colors">Oncology</button>
+<button class="whitespace-nowrap px-5 py-2 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high font-semibold text-sm transition-colors">Emergency</button>
+</div>
+</section>
+<!-- List Content (The "No-Divider" Layout) -->
+<section id="patient-list" class="space-y-4 mb-12">
+<!-- Table Header -->
+<div class="hidden md:grid grid-cols-12 gap-4 px-6 py-2 text-on-surface-variant font-bold text-[11px] uppercase tracking-[0.1em]">
+<div class="col-span-4">Patient Information</div>
+<div class="col-span-2">Patient ID</div>
+<div class="col-span-2">Department</div>
+<div class="col-span-2">Diagnosis</div>
+<div class="col-span-2">Status</div>
+</div>
+<!-- Rows injected by JS -->
+</section>
+<!-- Pagination / Footer Metadata -->
+<div class="flex items-center justify-between pb-24 md:pb-12 text-on-surface-variant text-sm font-medium">
+<p>Showing 1 to 4 of 1,284 patients</p>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-lg hover:bg-surface-container-high"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="w-8 h-8 rounded-lg bg-primary text-white flex items-center justify-center">1</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container-high flex items-center justify-center">2</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container-high flex items-center justify-center">3</button>
+<button class="p-2 rounded-lg hover:bg-surface-container-high"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-none shadow-[0_-8px_30px_rgba(0,71,141,0.05)] rounded-t-2xl">
+<a class="flex flex-col items-center justify-center text-[#424752] dark:text-slate-400 px-4 py-2 hover:text-[#005EB8] dark:hover:text-blue-300 transition-transform duration-300 ease-out" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-['Manrope'] text-[11px] font-medium tracking-wide">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#424752] dark:text-slate-400 px-4 py-2 hover:text-[#005EB8] dark:hover:text-blue-300 transition-transform duration-300 ease-out" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-['Manrope'] text-[11px] font-medium tracking-wide">Appointments</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#005EB8] text-white rounded-2xl px-5 py-2 scale-105 transition-transform duration-300 ease-out" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-['Manrope'] text-[11px] font-medium tracking-wide">Patients</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#424752] dark:text-slate-400 px-4 py-2 hover:text-[#005EB8] dark:hover:text-blue-300 transition-transform duration-300 ease-out" href="#">
+<span class="material-symbols-outlined">chat</span>
+<span class="font-['Manrope'] text-[11px] font-medium tracking-wide">Messages</span>
+</a>
+</nav>
+</nav>
+<script>
+async function loadPatients() {
+    try {
+        const response = await fetch('/api/patients');
+        const patients = await response.json();
+        
+        const listDiv = document.getElementById('patient-list');
+        
+        patients.forEach((patient) => {
+            const row = document.createElement('div');
+            row.className = 'grid grid-cols-1 md:grid-cols-12 gap-4 items-center bg-surface-container-lowest p-5 md:px-6 md:py-4 rounded-xl shadow-[0_2px_15px_rgba(0,71,141,0.03)] hover:shadow-[0_12px_40px_rgba(0,71,141,0.08)] transition-all cursor-pointer group';
+            
+            row.innerHTML = `
+                <div class="col-span-1 md:col-span-4 flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0">
+                        <span class="material-symbols-outlined text-secondary">person</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-on-surface group-hover:text-primary transition-colors">${patient.name}</h4>
+                        <p class="text-xs text-on-surface-variant">Age: ${patient.age || 'N/A'} • Gender: ${patient.gender}</p>
+                    </div>
+                </div>
+                <div class="col-span-1 md:col-span-2">
+                    <span class="text-sm font-mono font-medium text-on-surface-variant bg-surface-container px-2 py-1 rounded">#${patient.id}</span>
+                </div>
+                <div class="col-span-1 md:col-span-2">
+                    <span class="text-sm font-semibold text-on-surface">General</span>
+                </div>
+                <div class="col-span-1 md:col-span-2 text-sm text-on-surface-variant">
+                    ${patient.diagnosis || 'Pending'}
+                </div>
+                <div class="col-span-1 md:col-span-2">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant text-[11px] font-bold tracking-wider">ADMITTED</span>
+                </div>
+            `;
+            
+            listDiv.appendChild(row);
+        });
+        
+    } catch (error) {
+        console.error('Error fetching patients:', error);
+    }
+}
+document.addEventListener('DOMContentLoaded', loadPatients);
+</script>
+</body></html>

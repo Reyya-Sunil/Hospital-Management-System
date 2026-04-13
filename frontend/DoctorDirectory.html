@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Doctor Directory | Clinical Precision</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Public+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#e0e3e5",
+                    "on-primary-fixed": "#001b3d",
+                    "tertiary-fixed": "#ffdbcb",
+                    "background": "#f7f9fb",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#c8daff",
+                    "surface-bright": "#f7f9fb",
+                    "surface-container-low": "#f2f4f6",
+                    "surface": "#f7f9fb",
+                    "on-tertiary-fixed-variant": "#793100",
+                    "outline": "#727783",
+                    "error-container": "#ffdad6",
+                    "on-surface-variant": "#424752",
+                    "on-secondary-fixed": "#001d33",
+                    "primary-fixed-dim": "#a9c7ff",
+                    "secondary": "#47617b",
+                    "on-secondary-fixed-variant": "#2f4962",
+                    "on-primary-fixed-variant": "#00468c",
+                    "tertiary-fixed-dim": "#ffb691",
+                    "tertiary-container": "#9f4300",
+                    "surface-tint": "#005db6",
+                    "inverse-on-surface": "#eff1f3",
+                    "primary-fixed": "#d6e3ff",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed": "#341100",
+                    "surface-container-high": "#e6e8ea",
+                    "secondary-fixed-dim": "#aec9e7",
+                    "secondary-container": "#c4e0ff",
+                    "on-error": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#793100",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#eceef0",
+                    "primary-container": "#005eb8",
+                    "inverse-surface": "#2d3133",
+                    "on-tertiary-container": "#ffcfb9",
+                    "secondary-fixed": "#cfe5ff",
+                    "surface-dim": "#d8dadc",
+                    "primary": "#00478d",
+                    "on-background": "#191c1e",
+                    "inverse-primary": "#a9c7ff",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "surface-variant": "#e0e3e5",
+                    "on-secondary-container": "#49637d",
+                    "on-surface": "#191c1e",
+                    "outline-variant": "#c2c6d4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Public Sans"],
+                    "label": ["Public Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Public Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-3 bg-[#f7f9fb] dark:bg-slate-950 shadow-[0_12px_40px_rgba(0,71,141,0.08)]">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-primary-container flex items-center justify-center text-white font-bold">
+<img alt="Clinician Profile" data-alt="Professional headshot of a medical professional in a clean clinical setting with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmhzwZ1kJsXtYdHKu_TcnFNeA7zljT1OVXK7m9Qxj5IzmrA4L8URn8P9gW4y9GdRWe5nKNQqMnQnZvPwHTHPrAeL9xNPa7-GZLJjxHdN5VTJZ5gGJUQ5E8yDEfLCp-Q44B4n3ZcGcU9UeEN02ZYjyKLOfoO_7EzwXj-6VnIeqrM7Gwz7WBQg45Q8ptOWJDsuqZgfyZ6Yc6m9lc9cAPFkxh2l9qMrYdr1MI1MFND0z2OMU2ZYLRzJzbgTCRpsAm28VpTyAzVdiE540"/>
+</div>
+<span class="text-lg font-extrabold tracking-tight text-[#00478d] dark:text-blue-300 font-['Manrope']">Clinical Precision</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-[#424752] dark:text-slate-400 font-['Manrope'] hover:bg-[#f2f4f6] px-3 py-1 rounded-lg transition-colors" href="/staff-portal">Dashboard</a>
+<a class="text-[#424752] dark:text-slate-400 font-['Manrope'] hover:bg-[#f2f4f6] px-3 py-1 rounded-lg transition-colors" href="/appointments">Appointments</a>
+<a class="text-[#424752] dark:text-slate-400 font-['Manrope'] hover:bg-[#f2f4f6] px-3 py-1 rounded-lg transition-colors" href="/patients">Patients</a>
+<a class="text-[#005EB8] font-bold font-['Manrope']" href="/doctors">Doctors</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-[#f2f4f6] transition-colors text-[#005EB8]">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto">
+<!-- Search & Filter Header -->
+<section class="mb-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h1 class="text-4xl font-extrabold text-on-surface tracking-tight mb-2">Doctor Directory</h1>
+<p class="text-on-surface-variant font-medium">Manage clinical staff availability and view active schedules.</p>
+</div>
+<div class="flex gap-3">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="pl-10 pr-4 py-3 bg-surface-container-lowest border-none rounded-xl shadow-[0_4px_20px_rgba(0,71,141,0.04)] focus:ring-2 focus:ring-primary w-full md:w-80 font-body text-sm transition-all" placeholder="Search by name or specialty..." type="text"/>
+</div>
+<button class="flex items-center gap-2 px-5 py-3 bg-surface-container-high rounded-xl text-on-surface-variant hover:bg-surface-container-highest transition-colors font-medium text-sm">
+<span class="material-symbols-outlined" data-icon="filter_list">filter_list</span>
+                        Filters
+                    </button>
+</div>
+</div>
+</section>
+<!-- Bento Grid Directory -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+</div>
+<div id="doctors-list" class="col-span-1 md:col-span-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Doctors will be injected here via JS -->
+</div>
+<!-- Schedule Preview Mini-Module -->
+<div class="md:col-span-12 lg:col-span-12 bg-surface-container-low rounded-2xl p-8 border border-white/40">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h3 class="text-xl font-bold">Next Shift: ER Triage</h3>
+<p class="text-sm text-on-surface-variant">Tuesday, Oct 24 • 08:00 - 16:00</p>
+</div>
+<button class="text-primary font-bold text-sm flex items-center gap-1 hover:underline">
+                        Go to Master Calendar <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="bg-surface-container-lowest p-4 rounded-xl border-l-4 border-primary">
+<p class="text-[10px] font-bold text-outline tracking-wider uppercase mb-1">08:00 - 09:30</p>
+<p class="font-bold text-on-surface">Staff Briefing</p>
+<p class="text-xs text-on-surface-variant">Conference Room A</p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border-l-4 border-tertiary">
+<p class="text-[10px] font-bold text-outline tracking-wider uppercase mb-1">10:00 - 12:30</p>
+<p class="font-bold text-on-surface">Outpatient Clinics</p>
+<p class="text-xs text-on-surface-variant">Wing B, Level 2</p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border-l-4 border-secondary">
+<p class="text-[10px] font-bold text-outline tracking-wider uppercase mb-1">13:00 - 14:00</p>
+<p class="font-bold text-on-surface">Case Review</p>
+<p class="text-xs text-on-surface-variant">Radiology Dept</p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border-l-4 border-primary">
+<p class="text-[10px] font-bold text-outline tracking-wider uppercase mb-1">14:30 - 16:00</p>
+<p class="font-bold text-on-surface">Ward Rounds</p>
+<p class="text-xs text-on-surface-variant">Intensive Care Unit</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl md:hidden shadow-[0_-8px_30px_rgba(0,71,141,0.05)] rounded-t-2xl">
+<a href="/staff-portal" class="flex flex-col items-center justify-center text-[#424752] dark:text-slate-400 px-4 py-2 transition-transform duration-300 ease-out hover:text-[#005EB8]">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Manrope'] text-[11px] font-medium tracking-wide">Dashboard</span>
+</a>
+<a href="/appointments" class="flex flex-col items-center justify-center text-[#424752] dark:text-slate-400 px-4 py-2 transition-transform duration-300 ease-out hover:text-[#005EB8]">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="font-['Manrope'] text-[11px] font-medium tracking-wide">Appointments</span>
+</a>
+<a href="/patients" class="flex flex-col items-center justify-center text-[#424752] dark:text-slate-400 px-4 py-2 transition-transform duration-300 ease-out hover:text-[#005EB8]">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-['Manrope'] text-[11px] font-medium tracking-wide">Patients</span>
+</a>
+<a href="/doctors" class="flex flex-col items-center justify-center bg-[#005EB8] text-white rounded-2xl px-5 py-2 scale-105 transition-transform duration-300 ease-out">
+<span class="material-symbols-outlined" data-icon="medical_services">medical_services</span>
+<span class="font-['Manrope'] text-[11px] font-medium tracking-wide">Doctors</span>
+</a>
+</nav>
+<!-- Floating Action Button (FAB) - For adding staff -->
+<button class="fixed bottom-24 right-6 w-14 h-14 bg-gradient-to-br from-primary to-primary-container text-white rounded-2xl shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all md:bottom-8 md:right-8 z-40">
+<span class="material-symbols-outlined text-3xl" data-icon="person_add">person_add</span>
+</button>
+</button>
+<script>
+async function loadStaff() {
+    try {
+        const response = await fetch('/api/staff');
+        const staffList = await response.json();
+        
+        const listDiv = document.getElementById('doctors-list');
+        listDiv.innerHTML = '';
+        
+        staffList.forEach((staff) => {
+            const card = document.createElement('div');
+            card.className = 'bg-surface-container-lowest rounded-xl p-6 shadow-[0_4px_20px_rgba(0,71,141,0.04)]';
+            
+            card.innerHTML = `
+                <div class="flex gap-4 mb-6">
+                    <div class="w-16 h-16 rounded-xl overflow-hidden bg-surface-container-high flex items-center justify-center">
+                        <span class="material-symbols-outlined text-secondary">person</span>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex justify-between">
+                            <h3 class="text-lg font-bold">${staff.name}</h3>
+                            <span class="px-2 py-0.5 bg-green-50 text-green-700 text-[9px] font-bold rounded-full tracking-widest uppercase border border-green-100">Available</span>
+                        </div>
+                        <p class="text-tertiary font-bold tracking-wider text-[10px] mt-0.5 uppercase">${staff.role} - ${staff.department}</p>
+                    </div>
+                </div>
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-center gap-3 text-sm text-on-surface-variant">
+                        <span class="material-symbols-outlined text-[18px]">call</span>
+                        <span>${staff.contact}</span>
+                    </div>
+                </div>
+                <div class="flex gap-2">
+                    <button class="flex-1 py-2.5 bg-surface-container-high text-on-surface font-bold text-xs rounded-lg hover:bg-surface-container-highest transition-colors">View Profile</button>
+                    <button class="flex-1 py-2.5 bg-surface-container-high text-on-surface font-bold text-xs rounded-lg hover:bg-surface-container-highest transition-colors">Schedule</button>
+                </div>
+            `;
+            listDiv.appendChild(card);
+        });
+        
+    } catch (error) {
+        console.error('Error fetching staff:', error);
+    }
+}
+document.addEventListener('DOMContentLoaded', loadStaff);
+</script>
+</body></html>

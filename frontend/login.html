@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Public+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#191c1e",
+                        "inverse-primary": "#a9c7ff",
+                        "on-tertiary-container": "#ffcfb9",
+                        "inverse-surface": "#2d3133",
+                        "surface-dim": "#d8dadc",
+                        "primary": "#00478d",
+                        "secondary-fixed": "#cfe5ff",
+                        "outline-variant": "#c2c6d4",
+                        "on-surface": "#191c1e",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#49637d",
+                        "surface-variant": "#e0e3e5",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#d6e3ff",
+                        "tertiary": "#793100",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#005eb8",
+                        "surface-container": "#eceef0",
+                        "on-tertiary-fixed": "#341100",
+                        "secondary-container": "#c4e0ff",
+                        "secondary-fixed-dim": "#aec9e7",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#e6e8ea",
+                        "on-surface-variant": "#424752",
+                        "primary-fixed-dim": "#a9c7ff",
+                        "on-secondary-fixed": "#001d33",
+                        "outline": "#727783",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#793100",
+                        "tertiary-container": "#9f4300",
+                        "surface-tint": "#005db6",
+                        "inverse-on-surface": "#eff1f3",
+                        "tertiary-fixed-dim": "#ffb691",
+                        "secondary": "#47617b",
+                        "on-primary-fixed-variant": "#00468c",
+                        "on-secondary-fixed-variant": "#2f4962",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#c8daff",
+                        "tertiary-fixed": "#ffdbcb",
+                        "background": "#f7f9fb",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-primary-fixed": "#001b3d",
+                        "surface": "#f7f9fb",
+                        "surface-bright": "#f7f9fb",
+                        "surface-container-low": "#f2f4f6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Public Sans"],
+                        "label": ["Public Sans"]
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Public Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(24px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<!-- TopAppBar Mockup for Branding Context -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-transparent">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-xl bg-gradient-to-br from-primary to-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-sm" style="font-variation-settings: 'FILL' 1;">pulse_alert</span>
+</div>
+<span class="text-lg font-extrabold tracking-tight text-primary">Clinical Precision</span>
+</div>
+<div class="hidden md:flex gap-4 items-center">
+<span class="text-on-surface-variant text-sm font-medium">Need help?</span>
+<button class="text-primary font-semibold text-sm hover:underline">Support Center</button>
+</div>
+</header>
+<main class="flex-grow flex items-center justify-center relative overflow-hidden px-4 py-20">
+<!-- Background decorative elements -->
+<div class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-primary-fixed-dim/30 blur-[120px]"></div>
+<div class="absolute bottom-[-5%] left-[-5%] w-[400px] h-[400px] rounded-full bg-secondary-fixed/20 blur-[100px]"></div>
+<div class="w-full max-w-[1100px] grid grid-cols-1 lg:grid-cols-2 bg-surface-container-lowest rounded-[2rem] shadow-[0_32px_80px_rgba(0,71,141,0.08)] overflow-hidden z-10">
+<!-- Left Side: Brand & Visual -->
+<div class="hidden lg:flex flex-col justify-between p-12 bg-gradient-to-br from-primary to-primary-container text-white relative">
+<div class="z-10">
+<h2 class="text-4xl font-extrabold tracking-tight mb-4">Aura Health</h2>
+<p class="text-on-primary-container text-lg leading-relaxed max-w-sm">
+                        Experience the next generation of clinical management with absolute precision and human-centric design.
+                    </p>
+</div>
+<div class="relative z-10 mt-12 bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/10">
+<div class="flex items-center gap-4 mb-4">
+<img class="w-12 h-12 rounded-full object-cover border-2 border-white/20" data-alt="portrait of a confident medical professional in a clean modern hospital setting with soft blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyhniC0k5_HUjY05H6ur0Pmzo8UyrZmqeVrq5tudqTt8ZeHVn14XLC9Z_y_PKvhI1MZkYl6Jd0ygLDtKdLFZAqlE_2GCbhVpx1MKa-tXrSeeRlK3KZq9NFqfETnmQEHz0bAyJjSAJSrdp3bHfKt0cfWs_eX0LqQu811lMg8BTIKiM-2kz4JgoTS8N2Y2j-v3wrr6OCCU6AD7_MJCKxNgxqhfWHfUxhwmTKHVCPvaqs4CrwuTEB5EwVQeo7I8haU6ZvHNr0_rbLcpU"/>
+<div>
+<p class="font-bold text-sm">Dr. Aris Thorne</p>
+<p class="text-xs text-on-primary-container">Chief Medical Officer</p>
+</div>
+</div>
+<p class="text-sm italic text-white/90">"Clinical Precision allows us to focus on what matters most—patient care, without the noise of outdated software."</p>
+</div>
+<!-- Abstract graphic background -->
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<div class="absolute inset-0" data-alt="close up of microscopic cellular structures in soft teal and blue lighting with bokeh effects" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAVUugEVDt_um2Yxce0MiDObumhADcqTJCVeMOiaKYU_sto3tdO4Um2gRoptAajb4GiDlADHXmUbIijUqhptOsUPbuCTuRRlQUM78wXXfX4_yJGi2xoemJT0V39OziZCwv6jyjw1WBTDERzY4Nfh8IJSzP0tnKtYyWzOnPr1yn1rNB9IFcTbxPPCsimAMiE8STk1ecGGH4YHiAO9D6BNsS1bQytM6nHkCV3TSHxB6ivM5UfhyqXn1nzTVE4L5hQHLM_Yr-598PbgHc'); background-size: cover;"></div>
+</div>
+</div>
+<!-- Right Side: Login Form -->
+<div class="p-8 md:p-16 flex flex-col justify-center">
+<div class="mb-10">
+<h1 class="text-3xl font-bold text-on-surface tracking-tight mb-2">Welcome Back</h1>
+<p class="text-on-surface-variant font-medium">Please enter your clinical credentials or patient ID.</p>
+</div>
+<form id="login-form" class="space-y-6">
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant tracking-wide uppercase">Email or Patient ID</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">alternate_email</span>
+<input id="email" class="w-full pl-12 pr-4 py-4 bg-surface-container-low border-none rounded-xl text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 transition-all outline-none" placeholder="e.g. reyyasunil86@gmail.com" type="text" required/>
+<div class="absolute bottom-0 left-0 h-[2px] w-0 bg-primary group-focus-within:w-full transition-all duration-300"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<label class="block text-sm font-bold text-on-surface-variant tracking-wide uppercase">Password</label>
+<a class="text-primary text-xs font-bold hover:underline" href="#" onclick="document.getElementById('forgot-modal').classList.remove('hidden')">Forgot Password?</a>
+</div>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">lock</span>
+<input id="password" class="w-full pl-12 pr-12 py-4 bg-surface-container-low border-none rounded-xl text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 transition-all outline-none" placeholder="••••••••••••" type="password" required/>
+<button id="toggle-password" class="absolute right-4 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface-variant transition-colors" type="button">
+<span id="toggle-password-icon" class="material-symbols-outlined">visibility</span>
+</button>
+<div class="absolute bottom-0 left-0 h-[2px] w-0 bg-primary group-focus-within:w-full transition-all duration-300"></div>
+</div>
+</div>
+<div class="flex items-center gap-3 py-2">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary cursor-pointer" id="remember" type="checkbox"/>
+<label class="text-sm font-medium text-on-surface-variant cursor-pointer" for="remember">Stay logged in for 30 days</label>
+</div>
+<button type="submit" class="w-full py-4 bg-gradient-to-r from-primary to-primary-container text-white font-bold rounded-xl shadow-lg shadow-primary/20 hover:opacity-90 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+<span>Login to Aura Health</span>
+<span class="material-symbols-outlined text-[20px]">login</span>
+</button>
+<p id="error-msg" class="text-error text-sm font-bold flex justify-center mt-2 hidden"></p>
+</form>
+<div class="mt-12 pt-8 border-t border-surface-container-highest flex flex-col gap-6">
+<p class="text-center text-sm font-bold text-on-surface-variant tracking-wide uppercase">Or login as</p>
+<div class="grid grid-cols-2 gap-4">
+<button onclick="quickLogin('reyyasunil86@gmail.com')" class="flex flex-col items-center justify-center gap-3 p-4 bg-surface-container-low rounded-2xl hover:bg-surface-container-high transition-colors group">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">medical_services</span>
+</div>
+<span class="text-xs font-bold text-on-surface">Staff Portal</span>
+</button>
+<button onclick="quickLogin('test@patient.com')" class="flex flex-col items-center justify-center gap-3 p-4 bg-surface-container-low rounded-2xl hover:bg-surface-container-high transition-colors group">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed-variant group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">person</span>
+</div>
+<span class="text-xs font-bold text-on-surface">Patient Portal</span>
+</button>
+</div>
+</div>
+<div class="mt-8 text-center">
+<p class="text-sm text-on-surface-variant font-medium">
+                        Don't have an account? 
+                        <a class="text-primary font-bold hover:underline cursor-pointer" onclick="document.getElementById('register-modal').classList.remove('hidden')">Create Account</a>
+</p>
+</div>
+</div>
+</div>
+</main>
+<footer class="p-6 text-center z-10">
+<p class="text-xs text-on-surface-variant font-medium tracking-wide">
+            © 2024 Aura Health Systems. All rights reserved. 
+            <span class="mx-2 text-outline-variant">|</span>
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<span class="mx-2 text-outline-variant">|</span>
+<a class="hover:text-primary" href="#">HIPAA Compliance</a>
+</p>
+</footer>
+</footer>
+<div id="otp-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-[#191c1e]/60 backdrop-blur-sm hidden">
+    <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-2xl max-w-md w-full mx-4 border border-white/20">
+        <div class="flex items-center gap-4 mb-2">
+            <span class="material-symbols-outlined text-primary text-3xl">mark_email_read</span>
+            <h2 class="text-2xl font-bold font-headline text-on-surface">Verification</h2>
+        </div>
+        <p class="text-on-surface-variant text-sm mb-6">A 6-digit verification code has been securely sent to your email.</p>
+        
+        <form id="otp-form" class="space-y-6">
+            <div class="space-y-2">
+                <input id="otp-code" class="w-full px-4 py-4 bg-surface-container-low border-none rounded-xl text-center text-3xl font-bold tracking-[0.5em] text-on-surface focus:ring-2 focus:ring-primary/20 transition-all outline-none" type="text" maxlength="6" required/>
+            </div>
+            
+            <p id="otp-error-msg" class="text-error text-sm font-bold flex justify-center mt-2 hidden"></p>
+            
+            <button type="submit" class="w-full py-4 bg-gradient-to-r from-primary to-primary-container text-white font-bold rounded-xl shadow-lg shadow-primary/20 hover:opacity-90 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+                Verify & Login
+                <span class="material-symbols-outlined">verified_user</span>
+            </button>
+            <button type="button" onclick="cancelOtp()" class="w-full py-2 text-on-surface-variant text-sm font-bold hover:bg-surface-container transition-colors rounded-xl">
+                Cancel
+            </button>
+        </form>
+    </div>
+</div>
+
+<!-- Extra Modals -->
+<div id="forgot-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-[#191c1e]/60 backdrop-blur-sm hidden">
+    <div class="bg-surface-container-lowest p-8 rounded-2xl max-w-md w-full mx-4 border border-white/20">
+        <h2 class="text-2xl font-bold mb-4 text-on-surface">Forgot Password</h2>
+        <input id="forgot-email" class="w-full p-4 bg-surface-container-low mb-4 rounded-xl outline-none" placeholder="Enter your email" />
+        <button onclick="requestPasswordReset()" class="w-full p-4 bg-primary text-white rounded-xl hover:opacity-90 transition-all font-bold">Send Reset Code</button>
+        <button onclick="document.getElementById('forgot-modal').classList.add('hidden')" class="w-full mt-2 py-2 text-sm font-bold hover:bg-surface-container transition-colors rounded-xl">Cancel</button>
+    </div>
+</div>
+
+<div id="reset-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-[#191c1e]/60 backdrop-blur-sm hidden">
+    <div class="bg-surface-container-lowest p-8 rounded-2xl max-w-md w-full mx-4 border border-white/20">
+        <h2 class="text-2xl font-bold mb-4 text-on-surface">Reset Password</h2>
+        <input id="reset-otp" class="w-full p-4 bg-surface-container-low mb-4 rounded-xl outline-none text-center tracking-widest font-bold" placeholder="6-digit OTP" maxlength="6" />
+        <input id="reset-new-password" type="password" class="w-full p-4 bg-surface-container-low mb-4 rounded-xl outline-none" placeholder="New Password" />
+        <button onclick="submitPasswordReset()" class="w-full p-4 bg-primary text-white rounded-xl hover:opacity-90 transition-all font-bold">Reset Password</button>
+    </div>
+</div>
+
+<div id="register-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-[#191c1e]/60 backdrop-blur-sm hidden">
+    <div class="bg-surface-container-lowest p-8 rounded-2xl max-w-md w-full mx-4 border border-white/20">
+        <h2 class="text-2xl font-bold mb-4 text-on-surface">Create Account</h2>
+        <input id="reg-name" class="w-full p-4 bg-surface-container-low mb-4 rounded-xl outline-none" placeholder="Full Name" />
+        <input id="reg-email" class="w-full p-4 bg-surface-container-low mb-4 rounded-xl outline-none" placeholder="Email Address" type="email" />
+        <input id="reg-password" type="password" class="w-full p-4 bg-surface-container-low mb-4 rounded-xl outline-none" placeholder="Password" />
+        <button onclick="submitRegister()" class="w-full p-4 bg-primary text-white rounded-xl font-bold hover:opacity-90 transition-all">Register</button>
+        <button onclick="document.getElementById('register-modal').classList.add('hidden')" class="w-full mt-2 py-2 text-sm font-bold hover:bg-surface-container transition-colors rounded-xl">Cancel</button>
+    </div>
+</div>
+
+<div id="reg-verify-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-[#191c1e]/60 backdrop-blur-sm hidden">
+    <div class="bg-surface-container-lowest p-8 rounded-2xl max-w-md w-full mx-4 border border-white/20">
+        <h2 class="text-xl font-bold mb-4 text-on-surface">Verify Registration</h2>
+        <p class="text-sm mb-4 text-on-surface-variant">Check your email for the verification OTP.</p>
+        <input id="reg-otp" class="w-full p-4 bg-surface-container-low mb-4 rounded-xl outline-none text-center font-bold tracking-widest" placeholder="6-Digit OTP" maxlength="6" />
+        <button onclick="submitRegVerify()" class="w-full p-4 bg-primary text-white rounded-xl font-bold hover:opacity-90 transition-all">Complete Setup</button>
+    </div>
+</div>
+
+<script>
+let tempAuthData = null;
+let currentResetEmail = '';
+let currentRegEmail = '';
+
+// Eye Icon functionality
+document.getElementById('toggle-password').addEventListener('click', function() {
+    const passwordInput = document.getElementById('password');
+    const icon = document.getElementById('toggle-password-icon');
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        icon.textContent = 'visibility_off';
+    } else {
+        passwordInput.type = 'password';
+        icon.textContent = 'visibility';
+    }
+});
+
+function cancelOtp() {
+    document.getElementById('otp-modal').classList.add('hidden');
+    tempAuthData = null;
+}
+
+function quickLogin(emailValue) {
+    document.getElementById('email').value = emailValue;
+    document.getElementById('password').value = 'password123';
+    const event = new Event('submit', { cancelable: true });
+    document.getElementById('login-form').dispatchEvent(event);
+}
+
+// Register Flow
+async function submitRegister() {
+    const name = document.getElementById('reg-name').value;
+    const email = document.getElementById('reg-email').value;
+    const password = document.getElementById('reg-password').value;
+    
+    if(!name || !email || !password) return alert('Fill all fields');
+    
+    const res = await fetch('/api/auth/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, password })
+    });
+    const data = await res.json();
+    if(res.ok) {
+        alert(data.message);
+        document.getElementById('register-modal').classList.add('hidden');
+    } else {
+        alert(data.error);
+    }
+}
+
+async function submitRegVerify() {
+    const otp = document.getElementById('reg-otp').value;
+    if(!otp) return alert('Enter OTP');
+    
+    const res = await fetch('/api/auth/verify-registration', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: currentRegEmail, otp })
+    });
+    const data = await res.json();
+    if(res.ok) {
+        document.getElementById('reg-verify-modal').classList.add('hidden');
+        alert('Account created and verified! You can now log in.');
+    } else {
+        alert(data.error);
+    }
+}
+
+// Forgot Password Flow
+async function requestPasswordReset() {
+    const email = document.getElementById('forgot-email').value;
+    if(!email) return alert('Enter email');
+    currentResetEmail = email;
+    
+    const res = await fetch('/api/auth/forgot-password', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+    });
+    
+    const data = await res.json();
+    if(res.ok) {
+        alert("The Reset Password feature is currently inactive since email SMTP and OTP verification has been removed as per user request. Please log in utilizing known existing credentials instead.");
+        document.getElementById('forgot-modal').classList.add('hidden');
+    } else {
+        alert('Error requesting reset');
+    }
+}
+
+async function submitPasswordReset() {
+    const otp = document.getElementById('reset-otp').value;
+    const newPassword = document.getElementById('reset-new-password').value;
+    
+    if(!otp || !newPassword) return alert('Fill all fields');
+    
+    const res = await fetch('/api/auth/reset-password', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: currentResetEmail, otp, newPassword })
+    });
+    
+    const data = await res.json();
+    if(res.ok) {
+        document.getElementById('reset-modal').classList.add('hidden');
+        alert('Password resets successfully. Log in using your new password.');
+    } else {
+        alert(data.error);
+    }
+}
+
+document.getElementById('otp-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const otp = document.getElementById('otp-code').value;
+    const errorMsg = document.getElementById('otp-error-msg');
+    errorMsg.classList.add('hidden');
+    
+    try {
+        const response = await fetch('/api/auth/verify', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ 
+                email: tempAuthData.email, 
+                otp: otp,
+                internalRedirectData: tempAuthData.mockRedirectToUser 
+            })
+        });
+        
+        const data = await response.json();
+        
+        if (response.ok) {
+            localStorage.setItem('user', JSON.stringify(data.user));
+            window.location.href = data.redirectUrl;
+        } else {
+            errorMsg.innerText = data.error || 'Verification failed';
+            errorMsg.classList.remove('hidden');
+        }
+    } catch (error) {
+        errorMsg.innerText = 'Server connection failed';
+        errorMsg.classList.remove('hidden');
+    }
+});
+
+document.getElementById('login-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const errorMsg = document.getElementById('error-msg');
+    errorMsg.classList.add('hidden');
+    
+    try {
+        const response = await fetch('/api/auth/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, password })
+        });
+        
+        const data = await response.json();
+        
+        if (response.ok) {
+            if (data.step === 'verification_required') {
+                tempAuthData = data;
+                document.getElementById('otp-modal').classList.remove('hidden');
+                document.getElementById('otp-code').focus();
+            } else {
+                localStorage.setItem('user', JSON.stringify(data.user));
+                window.location.href = data.redirectUrl;
+            }
+        } else {
+            errorMsg.innerText = data.error || 'Login failed';
+            errorMsg.classList.remove('hidden');
+        }
+    } catch (error) {
+        errorMsg.innerText = 'Server connection failed';
+        errorMsg.classList.remove('hidden');
+    }
+});
+</script>
+</body></html>

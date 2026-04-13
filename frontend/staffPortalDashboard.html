@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clinical Precision | Aura Health Staff Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Public+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e0e3e5",
+                        "on-primary-fixed": "#001b3d",
+                        "tertiary-fixed": "#ffdbcb",
+                        "background": "#f7f9fb",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#c8daff",
+                        "surface-bright": "#f7f9fb",
+                        "surface-container-low": "#f2f4f6",
+                        "surface": "#f7f9fb",
+                        "on-tertiary-fixed-variant": "#793100",
+                        "outline": "#727783",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#424752",
+                        "on-secondary-fixed": "#001d33",
+                        "primary-fixed-dim": "#a9c7ff",
+                        "secondary": "#47617b",
+                        "on-secondary-fixed-variant": "#2f4962",
+                        "on-primary-fixed-variant": "#00468c",
+                        "tertiary-fixed-dim": "#ffb691",
+                        "tertiary-container": "#9f4300",
+                        "surface-tint": "#005db6",
+                        "inverse-on-surface": "#eff1f3",
+                        "primary-fixed": "#d6e3ff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#341100",
+                        "surface-container-high": "#e6e8ea",
+                        "secondary-fixed-dim": "#aec9e7",
+                        "secondary-container": "#c4e0ff",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#793100",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#eceef0",
+                        "primary-container": "#005eb8",
+                        "inverse-surface": "#2d3133",
+                        "on-tertiary-container": "#ffcfb9",
+                        "secondary-fixed": "#cfe5ff",
+                        "surface-dim": "#d8dadc",
+                        "primary": "#00478d",
+                        "on-background": "#191c1e",
+                        "inverse-primary": "#a9c7ff",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#e0e3e5",
+                        "on-secondary-container": "#49637d",
+                        "on-surface": "#191c1e",
+                        "outline-variant": "#c2c6d4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Public Sans"],
+                        "label": ["Public Sans"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Public Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-3 bg-[#f7f9fb] dark:bg-slate-950 shadow-[0_12px_40px_rgba(0,71,141,0.08)]">
+<div class="flex items-center gap-4">
+<span class="text-lg font-extrabold tracking-tight text-[#00478d] dark:text-blue-300 font-['Manrope']">Clinical Precision</span>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-[#005EB8] font-bold font-['Manrope'] transition-all duration-200" href="/staff-portal">Dashboard</a>
+<a class="text-[#424752] dark:text-slate-400 hover:bg-[#f2f4f6] dark:hover:bg-slate-800 transition-colors px-3 py-1 rounded-lg" href="/appointments">Appointments</a>
+<a class="text-[#424752] dark:text-slate-400 hover:bg-[#f2f4f6] dark:hover:bg-slate-800 transition-colors px-3 py-1 rounded-lg" href="/patients">Patients</a>
+<a class="text-[#424752] dark:text-slate-400 hover:bg-[#f2f4f6] dark:hover:bg-slate-800 transition-colors px-3 py-1 rounded-lg" href="#">Messages</a>
+</nav>
+<div class="flex items-center gap-3">
+<button class="material-symbols-outlined text-on-surface-variant p-2 hover:bg-surface-container-high rounded-full transition-all">notifications</button>
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-white font-bold border-2 border-white shadow-sm overflow-hidden">
+<img alt="Clinician Profile" data-alt="Professional clinician portrait in medical scrubs with warm lighting and sterile hospital background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANovIH13VtO7a4z8LunFbMg9cDSUjvbyexKIifJii8pl7cib11-VtjYfZ-Sqk_Xf7QlfY0xzy-Lqcp43B626mNbkt5yeJVzYsgkL2Q3dxdvThCuT5vGJzBJd0wv6Qjygcmhy2__YK95KBO4C0mnr4wJGwKBDSRVbs6OTT88uGaURbKZmjhjg6u_xmKF7kxeNQ_BHcQeqKcjSvKA0jPiEWeIxSG04HZAJdgq7zplZWNSOmaruiGEIrbZLLtWtx-1YPMJx-SpI70x5w"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto">
+<!-- Dashboard Header -->
+<div class="mb-10">
+<p class="text-primary font-semibold tracking-widest text-[10px] uppercase font-label mb-2">AURA HEALTH SYSTEMS</p>
+<h1 class="text-4xl font-extrabold text-on-surface tracking-tight">Staff Portal Dashboard</h1>
+<p class="text-on-surface-variant mt-2 text-lg">Real-time clinical throughput and operational capacity.</p>
+</div>
+<!-- Bento Grid Stats -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+<!-- Large Hero Stat -->
+<div class="md:col-span-2 bg-gradient-to-br from-primary to-primary-container p-8 rounded-xl text-white shadow-lg flex flex-col justify-between relative overflow-hidden">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-4xl mb-4 opacity-80">group</span>
+<h3 class="text-lg opacity-90 font-medium">Total Admitted Patients</h3>
+<p id="total-patients" class="text-6xl font-bold mt-2">--</p>
+</div>
+<div class="mt-8 relative z-10 flex items-center gap-2 text-sm bg-white/20 w-fit px-3 py-1 rounded-full backdrop-blur-md">
+<span class="material-symbols-outlined text-xs">trending_up</span>
+<span>+12% from last week</span>
+</div>
+<!-- Abstract Texture -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-20 -mt-20 blur-3xl"></div>
+</div>
+<!-- Active Doctors -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_12px_40px_rgba(0,71,141,0.08)] flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary-container mb-4">
+<span class="material-symbols-outlined">medical_services</span>
+</div>
+<h3 class="text-on-surface-variant font-medium">On-Duty Doctors</h3>
+<p id="on-duty-doctors" class="text-4xl font-bold text-on-surface mt-1">--</p>
+</div>
+<div class="mt-4 flex -space-x-3 overflow-hidden">
+<img alt="Dr. Smith" class="inline-block h-8 w-8 rounded-full ring-2 ring-white" data-alt="Female doctor in professional medical attire with stethoscope" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcSgHT495y8LX9UzvSAm3Pkvl5TuEm1tmTtE8VCSS3G10djX-sIGAWPxZCy9buEvwdx0ePmkcZ1yKTSD2PfMd4Yq8dZdmxOSSiGt1LK2pHRInXMq7zkAauHfA2oj4t0DWmQzhD-bA1MBFgxwdtK1zUPMaiQYw4anMFKbzAGpaKjcdnmajsgLulvG2C3FEGja6MesRtEfyvpJ_Y13NNu6_yfgEDGJhA7DCJY8ueHF69v_OU8v87-vFYAA9kVLVGKGADO3nX8PJ27Zc"/>
+<img alt="Dr. Chen" class="inline-block h-8 w-8 rounded-full ring-2 ring-white" data-alt="Male physician with glasses smiling in a modern clinic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy8lcZcNsuXQ-EweqNnfp582VjaFr45at23nJqeEwqP9bXAVVzWugxAEO_gtlRVD5u0k359RLEAGEPZUCG3wPdAsTsqmgbWOVQF-xPMxMGrY8-8j28A66fHorV5HoSxlU94QUqm8xB35YyfCv9-K9vC9TxtU0EmnPTHzNg2M6OL876gmYwEpDMBZcNIpb46TFrWm9C4ZeoLUThxdOTF-NBBbWE0_C-Ev1qxbzxio00gOE9zXlSlPzBoI2Qsxg1QyRp0crEbqEMpaY"/>
+<img alt="Dr. Patel" class="inline-block h-8 w-8 rounded-full ring-2 ring-white" data-alt="Young female medical resident in lab coat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzeqUL-UgTanwSzKrnN9ige9uTbGveuJ-LD5Nx4vSf_ZV8VpWeJCdIrpwdAyCzcWQabJ7d4att8-wHw-do7kW7-FE8FBpaMUOxhx5B9eFKiTfjpc_VJ1HQBJ0sdZj1so8SbmWpUpwKbcUT1nRrsDYOTNUIonnU-BTPtMIxAsGXud2mSIzhga9Ikub8m8VjdXAofae-AYDqJYfcgrIzkNj7LGVm__AwnvUWHp47ifXAVEGblC795-PPDPxO2e1RycR7lhC1Libqbm4"/>
+<div class="inline-block h-8 w-8 rounded-full ring-2 ring-white bg-surface-container-high flex items-center justify-center text-[10px] font-bold">+39</div>
+</div>
+</div>
+<!-- Beds Availability -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_12px_40px_rgba(0,71,141,0.08)] flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 bg-tertiary-fixed rounded-full flex items-center justify-center text-on-tertiary-fixed-variant mb-4">
+<span class="material-symbols-outlined">bed</span>
+</div>
+<h3 class="text-on-surface-variant font-medium">Available Beds</h3>
+<p id="available-beds" class="text-4xl font-bold text-on-surface mt-1">--</p>
+</div>
+<div class="mt-4">
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full w-[85%] rounded-full"></div>
+</div>
+<p class="text-[11px] text-tertiary font-bold mt-2 uppercase tracking-tighter">85% Capacity Reached</p>
+</div>
+</div>
+</div>
+<!-- Navigation & Quick Actions -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Directory Links -->
+<div class="lg:col-span-2 space-y-6">
+<h2 class="text-2xl font-bold tracking-tight mb-4">Core Management</h2>
+<a class="group block p-1 rounded-2xl bg-surface-container-low hover:bg-white transition-all duration-300" href="/patients">
+<div class="flex items-center gap-6 p-6">
+<div class="w-20 h-20 rounded-xl overflow-hidden shadow-md">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Modern high-tech patient monitoring screens in a clean hospital ward" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4gYcQHB2e_BtLNgspWtFvFly4XU8sDUrDjJSgD796uYFsq4ccRdakae1HaEQRyKb4obwgIaI05ov3qt-wqbofchV7GXX2ybQHeBmiSQsKwFKd_CAtahH8uOqEjkptbkXCG_Qloa8TmqmLQ36jSgy8uIdYY4sDwrd4UbwSMESmmqmNVu77RFPNrN80UynMDL5u9IWf7jKr6TS3GYzsl5HyqN0MgGgXtB3yq1pJJmLGWjKBckKsgzBPdhVcdtkyGmlAz7S1qOMaUhY"/>
+</div>
+<div class="flex-1">
+<h3 class="text-xl font-bold group-hover:text-primary transition-colors">Patient Directory</h3>
+<p class="text-on-surface-variant text-sm mt-1">Access medical records, history, and current treatment plans for all admitted patients.</p>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-2 transition-transform">arrow_forward_ios</span>
+</div>
+</a>
+<a class="group block p-1 rounded-2xl bg-surface-container-low hover:bg-white transition-all duration-300" href="/doctors">
+<div class="flex items-center gap-6 p-6">
+<div class="w-20 h-20 rounded-xl overflow-hidden shadow-md">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Medical team collaborating in a bright modern hospital hallway" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMXhpMcwlN4cECaTJKv84DdWnRrliK-K56QxL9kykpBo0ld2CvRfenhzOIHpHB7AAqhddDd88h8Y-r_8g-Gy5BkA692qo_i2Mp_8QEyrFPmNJ5tjo7wjwkF7dvjqwunSYJrDNoF5M4dDI7SNvUA6Kc-zLiqOXafTqUcmG6tbMRKgWdA9uQ2pvf-ZGKyPAYIr50hjZYJsj8LnxBVlLfiHrZYOUpSST61Ufvt8FsWCU_kuew5fvPPJpsh5DMAvSA9kuYg_1fKv26KIw"/>
+</div>
+<div class="flex-1">
+<h3 class="text-xl font-bold group-hover:text-primary transition-colors">Doctor Management</h3>
+<p class="text-on-surface-variant text-sm mt-1">Review staff schedules, department assignments, and availability rosters.</p>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-2 transition-transform">arrow_forward_ios</span>
+</div>
+</a>
+</div>
+<!-- Quick Actions Section -->
+<div class="bg-white/80 backdrop-blur-xl p-8 rounded-2xl shadow-[0_12px_40px_rgba(0,71,141,0.05)] border border-white/20">
+<h2 class="text-xl font-bold mb-6">Quick Actions</h2>
+<div class="space-y-3">
+<button onclick="document.getElementById('admission-modal').classList.remove('hidden')" class="w-full flex items-center gap-4 p-4 rounded-xl bg-primary text-white font-bold hover:shadow-lg transition-all active:scale-95 text-left">
+<span class="material-symbols-outlined p-2 bg-white/20 rounded-lg">person_add</span>
+<span>New Patient Admission</span>
+</button>
+<button onclick="window.location.href='/appointments'" class="w-full flex items-center gap-4 p-4 rounded-xl bg-secondary-container text-on-secondary-container font-semibold hover:bg-surface-container-highest transition-all active:scale-95 text-left">
+<span class="material-symbols-outlined p-2 bg-white/40 rounded-lg">edit_calendar</span>
+<span>Schedule Surgery</span>
+</button>
+<a href="http://localhost:3000/api/pdf/patients" class="w-full flex items-center gap-4 p-4 rounded-xl bg-surface-container text-on-surface font-semibold hover:bg-surface-container-highest transition-all active:scale-95 text-left cursor-pointer">
+<span class="material-symbols-outlined p-2 bg-primary/10 rounded-lg text-primary">picture_as_pdf</span>
+<span>Download Patient Details (PDF)</span>
+</a>
+<a href="http://localhost:3000/api/pdf/staff" class="w-full flex items-center gap-4 p-4 rounded-xl bg-surface-container text-on-surface font-semibold hover:bg-surface-container-highest transition-all active:scale-95 text-left cursor-pointer">
+<span class="material-symbols-outlined p-2 bg-primary/10 rounded-lg text-primary">picture_as_pdf</span>
+<span>Download Staff Details (PDF)</span>
+</a>
+<button class="w-full flex items-center gap-4 p-4 rounded-xl bg-surface-container text-on-surface font-semibold hover:bg-surface-container-highest transition-all active:scale-95 text-left">
+<span class="material-symbols-outlined p-2 bg-primary/10 rounded-lg text-primary">emergency</span>
+<span>Emergency Alert</span>
+</button>
+</div>
+<div class="mt-8 p-4 bg-tertiary-fixed rounded-xl">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-on-tertiary-fixed-variant">info</span>
+<div>
+<p class="font-bold text-on-tertiary-fixed text-sm">System Maintenance</p>
+<p class="text-xs text-on-tertiary-fixed-variant mt-1">Database sync scheduled for 02:00 AM UTC tonight.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_-8px_30px_rgba(0,71,141,0.05)] rounded-t-2xl">
+<a class="flex flex-col items-center justify-center bg-[#005EB8] text-white rounded-2xl px-5 py-2 scale-105 transition-transform duration-300 ease-out" href="/staff-portal">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-['Manrope'] text-[11px] font-medium tracking-wide">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#424752] dark:text-slate-400 px-4 py-2 hover:text-[#005EB8] dark:hover:text-blue-300 transition-transform duration-300 ease-out" href="/appointments">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-['Manrope'] text-[11px] font-medium tracking-wide">Appointments</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#424752] dark:text-slate-400 px-4 py-2 hover:text-[#005EB8] dark:hover:text-blue-300 transition-transform duration-300 ease-out" href="/patients">
+<span class="material-symbols-outlined">group</span>
+<span class="font-['Manrope'] text-[11px] font-medium tracking-wide">Patients</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#424752] dark:text-slate-400 px-4 py-2 hover:text-[#005EB8] dark:hover:text-blue-300 transition-transform duration-300 ease-out" href="#">
+<span class="material-symbols-outlined">chat</span>
+<span class="font-['Manrope'] text-[11px] font-medium tracking-wide">Messages</span>
+</a>
+</nav>
+
+<!-- Patient Admission Modal -->
+<div id="admission-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-[#191c1e]/60 backdrop-blur-sm hidden">
+    <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-2xl max-w-md w-full mx-4 border border-white/20">
+        <h2 class="text-2xl font-bold mb-6 text-on-surface">New Patient Admission</h2>
+        <form id="admission-form" class="space-y-4">
+            <div>
+                <label class="block text-xs font-bold text-on-surface-variant uppercase mb-1">Full Name</label>
+                <input id="pt-name" class="w-full px-4 py-3 bg-surface-container-low rounded-xl" required/>
+            </div>
+            <div class="flex gap-4">
+                <div class="w-1/2">
+                    <label class="block text-xs font-bold text-on-surface-variant uppercase mb-1">Age</label>
+                    <input id="pt-age" type="number" class="w-full px-4 py-3 bg-surface-container-low rounded-xl" required/>
+                </div>
+                <div class="w-1/2">
+                    <label class="block text-xs font-bold text-on-surface-variant uppercase mb-1">Gender</label>
+                    <select id="pt-gender" class="w-full px-4 py-3 bg-surface-container-low rounded-xl" required>
+                        <option>Male</option><option>Female</option><option>Other</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <label class="block text-xs font-bold text-on-surface-variant uppercase mb-1">Diagnosis</label>
+                <input id="pt-diagnosis" class="w-full px-4 py-3 bg-surface-container-low rounded-xl" required/>
+            </div>
+            <div>
+                <label class="block text-xs font-bold text-on-surface-variant uppercase mb-1">Contact Details</label>
+                <input id="pt-contact" class="w-full px-4 py-3 bg-surface-container-low rounded-xl" required/>
+            </div>
+            <div class="pt-4 flex gap-3">
+                <button type="button" onclick="document.getElementById('admission-modal').classList.add('hidden')" class="flex-1 py-3 text-on-surface-variant font-bold hover:bg-surface-container rounded-xl">Cancel</button>
+                <button type="submit" class="flex-1 py-3 bg-primary text-white font-bold rounded-xl shadow-lg shadow-primary/20 hover:opacity-90 active:scale-[0.98]">Admit Patient</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+async function loadDashboardStats() {
+    try {
+        const response = await fetch('/api/dashboard/stats');
+        const data = await response.json();
+        
+        document.getElementById('total-patients').innerText = data.totalAdmittedPatients;
+        document.getElementById('on-duty-doctors').innerText = data.onDutyDoctors;
+        document.getElementById('available-beds').innerText = data.availableBeds;
+        
+        // Update capacity UI roughly based on total vs available beds
+        if (data.totalBeds > 0) {
+            const occupied = data.totalBeds - data.availableBeds;
+            const percentage = Math.round((occupied / data.totalBeds) * 100);
+            document.querySelector('.w-\\[85\\%\\]').style.width = `${percentage}%`;
+            document.querySelector('.tracking-tighter').innerText = `${percentage}% CAPACITY REACHED`;
+        }
+    } catch (error) {
+        console.error('Error fetching dashboard stats:', error);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', loadDashboardStats);
+
+document.getElementById('admission-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const name = document.getElementById('pt-name').value;
+    const age = document.getElementById('pt-age').value;
+    const gender = document.getElementById('pt-gender').value;
+    const diagnosis = document.getElementById('pt-diagnosis').value;
+    const contact = document.getElementById('pt-contact').value;
+    
+    try {
+        const response = await fetch('/api/patients', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, age, gender, diagnosis, contact })
+        });
+        if (response.ok) {
+            document.getElementById('admission-modal').classList.add('hidden');
+            e.target.reset();
+            alert("New patient successfully admitted!");
+            loadDashboardStats(); // Refresh the stats
+        } else {
+            alert("Failed to admit the patient.");
+        }
+    } catch(err) {
+        alert("Server error admitting patient.");
+    }
+});
+</script>
+</body></html>
